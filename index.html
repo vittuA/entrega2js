@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel:500,700|Playfair+Display:400,700" rel="stylesheet">
+       
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+       
+        
+        <title>Detective Sims</title>
+    </head>
+    <body>
+        <nav>
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#guia">GUIA</a></li>
+                <li><a href="#recursosJogo">RECURSOS</a></li>
+                <li><a href="#galeria">GALERIA</a></li>
+            </ul>
+            <a href="#" class="botao">Early Access</a>
+        </nav>
+        
+        <header>
+            <h1>Um mistério tem inúmeras soluções, infelizmente somente uma representa a justiça</h1>
+                <a href="#" class="botao">Early Access</a>
+        </header>
+        
+        <section id="guia">
+            <h2>Guia de Jogo</h2>
+            <p>Descubra o que realmente nos faz humanos em uma jornada forte e emocionante, feita de escolhas e consequências.</p>
+            <a href="#" class="botao">Saiba mais</a>            
+        </section>
+        
+        <section id="destaques">
+            <h2>Movidos por Mistérios</h2>
+            <p>Texto que motive a resolução dos mistérios do jogo</p>
+        </section>
+        
+        <section id="recursosJogo">
+            <h2>Recursos do Jogo</h2>
+            <section id="itemsrc">
+                <div class="recurso">
+                    <h3>Participe da narrativa envolvente</h3>
+                    <p>Descubra o que é ser um humano do ponto de vista de alguém de fora e veja o mundo pelo olhar de uma máquina.</p>
+                    <img src="img/img2.jpg" alt="image">
+                </div>
+                <div class="recurso">
+                    <h3>Participe da narrativa envolvente</h3>
+                    <p>Descubra o que é ser um humano do ponto de vista de alguém de fora e veja o mundo pelo olhar de uma máquina.</p>
+                    <img src="img/img3.jpg" alt="image">
+                </div>
+                <div class="recurso">
+                    <h3>Participe da narrativa envolvente</h3>
+                    <p>Descubra o que é ser um humano do ponto de vista de alguém de fora e veja o mundo pelo olhar de uma máquina.</p>
+                    <img src="img/img4.jpg" alt="image">
+                </div>
+            </section>
+        </section>
+        
+        <section id="misterios">
+            <h2>Mistérios</h2>
+            <p>Resolva os Mistérios</p>
+                <section id="mist">
+                    <div class="mist1">
+                        <h3>Nome do Caso</h3>
+
+                       
+                         <a href="#" class="botao">Explore</a>
+                    </div>
+                    <div class="mist2">
+                        <h3>Nome do Caso</h3>
+
+                        
+                         <a href="#" class="botao">Explore</a>
+                    </div>
+                    <div class="mist3">
+                        <h3>Nome do Caso</h3>
+
+                        
+                         <a href="#" class="botao">Explore</a>
+                    </div>
+                    <div class="mist4">
+                        <h3>Nome do Caso</h3>
+
+                       
+                         <a href="#" class="botao">Explore</a>
+                    </div>
+                </section>
+        </section>
+        
+        <section id="galeria">
+            <h2>Veja algumas cenas de Detective Sims</h2>
+            <img src="img/img4.jpg" alt="image">
+            <img src="img/img3.jpg" alt="image">
+            <img src="img/img2.jpg" alt="image">
+            <img src="img/img1.jpg" alt="image">
+            <img src="img/img6.png" alt="image">
+            <img src="img/img5.jpg" alt="image">
+        </section>
+        
+        <footer>
+            <h3>Detective Sims</h3>
+            <div>
+                <h4>Lançamento:</h4>
+                <p>10/10/2018</p>
+            </div>
+            <div>
+                <h4>Desenvoledor:</h4>
+                <img src="img/logo.png" alt="nome dev" class="logo">
+                <p>Carlos Rodriguês</p>
+                <p>Vinicius Carpi</p>
+                <p>Vitor Souza</p>
+            </div>
+            
+            <div>
+                <h4>Plataforma:</h4>
+                <img src="img/logo.png" alt="win PC" class="logo">
+                <p>Windows PC</p>
+            </div>
+        </footer>
+        
+        <!-- código para o efeito das letras no header utilizando o h1-->
+        <script>
+            //CONSTRUCAO
+            function typeWriter(elemento) { //nome da funcao e parametro (elemento) é o texto
+                const textoArray = elemento.innerHTML.split(''); //recebe o valor do texto, sem o html. O SLIP('') separa os caracteres.
+                elemento.innerHTML = '';//deixa o h2 no html sem receber nenhum valor, para que o efeito possa ser observado
+                    textoArray.forEach(function(letra, i){//para cada posicao do array, passar a letra e o numero da posicao(i)
+                        setTimeout(function(){ //definir o que fazer e quando deve ocorrer.
+                            elemento.innerHTML += letra;//mostra no html a letra individual da posicao i
+                        }, 90 * i) //a primira letra demora 0ms, a segunda 90ms, 3a 90*i ....
+                        
+                    });
+            }         
+
+            //CHAMDA
+            const titulo = document.querySelector('header h1'); //busca no html a tag <header> e <h1> e coloca na constante titulo
+            typeWriter(titulo);//executando a funcao mandano o parametro.
+        </script>   
+    </body>
+</html>
